@@ -1,5 +1,6 @@
 package com.pluralsight;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class App {
@@ -73,7 +74,7 @@ public class App {
                 case "a" -> System.out.println("TODO: viewAllWorkouts()");
                 case "q" -> System.out.println("TODO: viewQuickWOrkouts()");
                 case "f" -> System.out.println("TODO: viewFavoriteWorkouts()");
-                case "s" -> System.out.println("TODO: runSeachScreen()");
+                case "s" -> runSearchScreen();
                 case "h" -> System.out.println("Returning to home screen...");
                 default -> System.out.println("Invalid input. Please make a selection from the options listed above.");
             }
@@ -96,7 +97,7 @@ public class App {
                     Enter your selection: 
                     """);
 
-            userChoice = scanner.nextLine().trim();
+            userChoice = scanner.nextLine().trim().toLowerCase();
 
             switch (userChoice) {
                 case "1" -> System.out.println("TODO: searchByName(String name)");

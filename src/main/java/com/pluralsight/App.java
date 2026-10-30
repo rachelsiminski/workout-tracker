@@ -47,8 +47,9 @@ public class App {
 
         System.out.println("Enter the duration in minutes: ");
         String durationInMinutes = scanner.nextLine().trim();
+        int workoutDuration = Integer.parseInt(durationInMinutes);
 
-        System.out.printf("Workout information:%n - Name: %s%n - Type: %s%n - Duration: %s minutes", workoutName, workoutType, durationInMinutes);
+        System.out.printf("Workout information:%n - Name: %s%n - Type: %s%n - Duration: %d minutes", workoutName, workoutType, workoutDuration);
 
         pressEnterToContinue();
     }
